@@ -20,14 +20,16 @@ class Kitchen {
 
         for (let i = 0; i < this.list.length; i++) {
             const availableProduct = this.list[i];
+            const pakeistasZodis = this.upperCase(availableProduct.item);
 
-            console.log(`${i + 1}) ${availableProduct.item.up}: ${availableProduct.quantity}`);
+            console.log(`${i + 1}) ${pakeistasZodis}: ${availableProduct.quantity}`);
+            //console.log(`${i + 1}) ${availableProduct.item[0].toUpperCase() + slice(1)}: ${availableProduct.quantity}`);
         }
     }
 
-    upperCase() {
-        let up = '';
-        up = charAt[0].toUpperCase() + availableProduct.item.slice(1);
+    upperCase(text) {
+        let capitalize = text[0].toUpperCase() + text.slice(1);
+        return capitalize;
     }
 
     sunaudota(itemName, usedQuantity) {
